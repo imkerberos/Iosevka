@@ -93,7 +93,7 @@ jobs:
           for STYLE in "Regular"; do
             fontforge "fuse_fonts.ff" \
               "LXGWWenKaiMonoLite-${STYLE}.ttf" \
-              "IosevkaTermLxgwSlabNerdFont-${STYLE}.ttf" \
+              "IosevkaLxgwSlabNerdFont-${STYLE}.ttf" \
               "$FUSION_ID-$STYLE" \
               "$FUSION_NAME" \
               "$FUSION_NAME $STYLE" \
