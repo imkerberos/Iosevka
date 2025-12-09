@@ -7,12 +7,13 @@ exportGlyphNames = true
 buildTextureFeature = true
 
 [buildPlans.IosevkaLxgwSlab.variants]
-inherits = "ss08"
+inherits = "ss18"
 
 [buildPlans.IosevkaLxgwSlab.metricOverride]
 # 1150 显示52行
 # leading = 1150
 # 1130显示55行
+# leading = 1150
 leading = 1130
 cap = 665
 ascender = 665
@@ -20,7 +21,7 @@ xHeight = 480
 accentHeight = 136
 parenSize = 840
 # sb默认为60，调整到58后，字符显得挤了点
-# sb = 59
+sb = 58
 
 [buildPlans.IosevkaLxgwSlab.variants.design]
 #one = "no-base"

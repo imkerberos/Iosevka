@@ -199,8 +199,4 @@ jobs:
             [Github Workflow #${{ github.run_number }}](${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }})
 
           files: |
-            iosevka/dist/IosevkaLxgwSlab/TTF/IosevkaLxgwSlab-Regular.ttf
-            iosevka/dist/IosevkaLxgwSlab/TTF/IosevkaLxgwSlab-Italic.ttf
-            IosevkaLxgwSlabNerdFont-Regular.ttf
-            IosevkaLxgwSlabNerdFont-Italic.ttf
             ${{ env.FUSION_ID }}-Regular.ttf
