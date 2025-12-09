@@ -22,7 +22,7 @@ env:
 jobs:
   build:
     name: Build ${{ matrix.fontName }} font
-    if: github.repository == 'georgealbert/Iosevka'
+    if: github.repository == 'imkerberos/Iosevka'
     runs-on: ubuntu-latest
 
     strategy:
@@ -167,7 +167,7 @@ jobs:
           echo 'EOF' >> $GITHUB_ENV
 
           echo ${{ env.release_body }}
-          
+
       - name: Publish Release
         id: publish_release
         uses: softprops/action-gh-release@v2

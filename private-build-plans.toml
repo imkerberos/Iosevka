@@ -6,49 +6,49 @@ noCvSs = true
 exportGlyphNames = true
 buildTextureFeature = true
 
-  [buildPlans.IosevkaTermSs05.variants]
-  inherits = "ss05"
+[buildPlans.IosevkaTermSs05.variants]
+inherits = "ss05"
 
-    [buildPlans.IosevkaTermSs05.metricOverride]
-    # 1150 显示52行
-    # leading = 1150
-    # 1130显示55行
-    leading = 1130
-    cap = 665
-    ascender = 665
-    xHeight = 480
-    accentHeight = 136
-    parenSize = 840
-    # sb默认为60，调整到58后，字符显得挤了点
-    # sb = 59
+[buildPlans.IosevkaTermSs05.metricOverride]
+# 1150 显示52行
+# leading = 1150
+# 1130显示55行
+leading = 1130
+cap = 665
+ascender = 665
+xHeight = 480
+accentHeight = 136
+parenSize = 840
+# sb默认为60，调整到58后，字符显得挤了点
+# sb = 59
 
-    [buildPlans.IosevkaTermSs05.variants.design]
-    one = "no-base"
-    four = "closed-serifless"
-    six = "straight-bar"
-    nine = "open-contour"
-    zero = "oval-tall-slashed"
-    a = "double-storey-serifless"
-    # f = "flat-hook-serifless"
-    # i = "serifed-flat-tailed"
-	i = "serifed"
-    j = "flat-hook-serifed"
-    # l = "serifed-flat-tailed"
-    l = "zshaped"
-    # FiraCode的r是有个钩子的
-    r = "corner-hooked-top-serifed"
-    t = "flat-hook-short-neck2"
-    ampersand = "closed"
-    at = "fourfold"
+[buildPlans.IosevkaTermSs05.variants.design]
+one = "no-base"
+four = "closed-serifless"
+six = "straight-bar"
+nine = "open-contour"
+zero = "oval-tall-slashed"
+a = "double-storey-serifless"
+# f = "flat-hook-serifless"
+# i = "serifed-flat-tailed"
+i = "serifed"
+j = "flat-hook-serifed"
+# l = "serifed-flat-tailed"
+l = "zshaped"
+# FiraCode的r是有个钩子的
+r = "corner-hooked-top-serifed"
+t = "flat-hook-short-neck2"
+ampersand = "closed"
+at = "fourfold"
 
-  [buildPlans.IosevkaTermSs05.ligations]
-  inherits = "dlig"
+[buildPlans.IosevkaTermSs05.ligations]
+inherits = "dlig"
 
 [buildPlans.IosevkaTermSs05.weights.Regular]
 # 改为Retina的450看看。400 -> 450
-shape = 450
-menu = 450
-css = 450
+shape = 400
+menu = 400
+css = 400
 
 [buildPlans.IosevkaTermSs05.widths.Normal]
 # 默认宽度shape = 500
