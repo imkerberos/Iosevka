@@ -7,9 +7,9 @@ on:
   workflow_dispatch: # 允许手动触发该工作流
 
 env:
-  FILE_MERGED_WFM: IosevkaTermSS05NFM+LXGWWenKaiMonoLite
-  FUSION_NAME: IosevkaTermSS05 Nerd Font Mono + LXGW WenKai Mono Lite
-  FUSION_ID: IosevkaTermSS05NFM+LXGWWenKaiMonoLite
+  FILE_MERGED_WFM: IosevkaLxgwSlab
+  FUSION_NAME: IosevkaLxgw Slab Nerd Font
+  FUSION_ID: IosevkaLxgwSlab
   FUSION_DEVELOPER: Albert
   FUSION_DESCRIPTION: "The free and open-source font fused with Iosevka and LXGW WenKai"
   FUSION_COPYRIGHT: Copyright 2025 Albert (${{ github.server_url }}/${{ github.repository }})
@@ -27,7 +27,7 @@ jobs:
 
     strategy:
       matrix:
-        fontName: ["IosevkaTermSs05"]
+        fontName: ["IosevkaLxgwSlab"]
 
     steps:
       # Checkout repository into `iosevka` sub directory
@@ -63,8 +63,8 @@ jobs:
 
       - name: Patch Iosevka
         run: |
-          ./font-patcher --quiet --adjust-line-height --complete --careful -s iosevka/dist/IosevkaTermSs05/TTF/IosevkaTermSs05-Regular.ttf
-          ./font-patcher --quiet --adjust-line-height --complete --careful -s iosevka/dist/IosevkaTermSs05/TTF/IosevkaTermSs05-Italic.ttf
+          ./font-patcher --quiet --adjust-line-height --complete --careful iosevka/dist/IosevkaLxgwSlab/TTF/IosevkaLxgwSlab-Regular.ttf
+          ./font-patcher --quiet --adjust-line-height --complete --careful iosevka/dist/IosevkaLxgwSlab/TTF/IosevkaLxgwSlab-Italic.ttf
 
       - name: Download LXGWWenKaiMonoLite
         run: |
@@ -93,7 +93,7 @@ jobs:
           for STYLE in "Regular"; do
             fontforge "fuse_fonts.ff" \
               "LXGWWenKaiMonoLite-${STYLE}.ttf" \
-              "IosevkaTermSS05NerdFontMono-${STYLE}.ttf" \
+              "IosevkaTermLxgwSlabNerdFont-${STYLE}.ttf" \
               "$FUSION_ID-$STYLE" \
               "$FUSION_NAME" \
               "$FUSION_NAME $STYLE" \
@@ -110,7 +110,7 @@ jobs:
       - name: Fix Iosevka and merged font
         run: |
           # Fix Iosevka font agvCharWidth.
-          python width.py -f 520 IosevkaTermSS05NerdFontMono-Regular.ttf -l -200 -n 30
+          python width.py -f 520 IosevkaLxgwSlabNerdFont-Regular.ttf -l -200 -n 30
 
           # Fix merged font.
           # python width.py -m ${FILE_MERGED_WFM}-Regular.ttf -o 1000 -t 1040 > /dev/null
@@ -132,7 +132,7 @@ jobs:
               --version "$NOW; $FUSION_VERSION" \
               --copyright "$(echo -e "$IOSEVKA_COPYRIGHT\n$LXGW_COPYRIGHT\n$FUSION_COPYRIGHT")" \
               --license "$FUSION_LICENSE" \
-              --urlvendor "https://github.com/georgealbert/Iosevka" \
+              --urlvendor "https://github.com/imkergeros/Iosevka" \
               --urldesigner "https://www.albertzhou.net" \
               --urllicense "https://openfontlicense.org"
             mv "${FUSION_ID}-${STYLE}.ttf.fix" "${FUSION_ID}-${STYLE}.ttf"
@@ -148,9 +148,9 @@ jobs:
           for STYLE in "Regular"; do
             echo "" >> $GITHUB_ENV
             echo "# Font Info:" >> $GITHUB_ENV
-            echo "* IosevkaTermSS05NerdFontMono-${STYLE}.ttf:" >> $GITHUB_ENV
+            echo "* IosevkaLxgwSlabNerdFont-${STYLE}.ttf:" >> $GITHUB_ENV
             echo "\`\`\`" >> $GITHUB_ENV
-            python width.py -c IosevkaTermSS05NerdFontMono-${STYLE}.ttf >> $GITHUB_ENV
+            python width.py -c IosevkaLxgwSlabNerdFont-${STYLE}.ttf >> $GITHUB_ENV
             echo "\`\`\`" >> $GITHUB_ENV
 
             # echo "" >> $GITHUB_ENV
@@ -178,7 +178,7 @@ jobs:
           body: >
             针对原版`Iosevka`字体过于瘦高进行了下面的优化：
 
-            1. `Iosevka`字体参考`FiraCode`风格，调整了i、r、l、t和1、4、0等数字的样式。
+            1. ~`Iosevka`字体参考`FiraCode`风格，调整了i、r、l、t和1、4、0等数字的样式。~
 
             2. 加宽了`Iosevka`字体，宽度从默认的`500`增加到`520`，中文相应的从`1000`增加到`1040`，保持等宽。
 
@@ -199,8 +199,8 @@ jobs:
             [Github Workflow #${{ github.run_number }}](${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }})
 
           files: |
-            iosevka/dist/IosevkaTermSs05/TTF/IosevkaTermSs05-Regular.ttf
-            iosevka/dist/IosevkaTermSs05/TTF/IosevkaTermSs05-Italic.ttf
-            IosevkaTermSS05NerdFontMono-Regular.ttf
-            IosevkaTermSS05NerdFontMono-Italic.ttf
+            iosevka/dist/IosevkaLxgwSlab/TTF/IosevkaLxgwSlab-Regular.ttf
+            iosevka/dist/IosevkaLxgwSlab/TTF/IosevkaLxgwSlab-Italic.ttf
+            IosevkaLxgwSlabNerdFont-Regular.ttf
+            IosevkaLxgwSlabNerdFont-Italic.ttf
             ${{ env.FUSION_ID }}-Regular.ttf
