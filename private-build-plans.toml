@@ -6,8 +6,8 @@ noCvSs = true
 exportGlyphNames = true
 buildTextureFeature = true
 
-#[buildPlans.IosevkaLxgwSlab.variants]
-#inherits = "ss18"
+[buildPlans.IosevkaLxgwSlab.variants]
+inherits = "ss18"
 
 [buildPlans.IosevkaLxgwSlab.metricOverride]
 # 1150 显示52行
