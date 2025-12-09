@@ -1,7 +1,7 @@
 [buildPlans.IosevkaTermSs05]
 family = "IosevkaTermSS05"
 spacing = "term"
-serifs = "sans"
+serifs = "slab"
 noCvSs = true
 exportGlyphNames = true
 buildTextureFeature = true
@@ -23,23 +23,23 @@ parenSize = 840
 # sb = 59
 
 [buildPlans.IosevkaTermSs05.variants.design]
-one = "no-base"
-four = "closed-serifless"
-six = "straight-bar"
-nine = "open-contour"
-zero = "oval-tall-slashed"
-a = "double-storey-serifless"
-# f = "flat-hook-serifless"
-# i = "serifed-flat-tailed"
-i = "serifed"
-j = "flat-hook-serifed"
-# l = "serifed-flat-tailed"
-l = "zshaped"
-# FiraCode的r是有个钩子的
-r = "corner-hooked-top-serifed"
-t = "flat-hook-short-neck2"
-ampersand = "closed"
-at = "fourfold"
+#one = "no-base"
+#four = "closed-serifless"
+#six = "straight-bar"
+#nine = "open-contour"
+#zero = "oval-tall-slashed"
+#a = "double-storey-serifless"
+## f = "flat-hook-serifless"
+## i = "serifed-flat-tailed"
+#i = "serifed"
+#j = "flat-hook-serifed"
+## l = "serifed-flat-tailed"
+#l = "zshaped"
+## FiraCode的r是有个钩子的
+#r = "corner-hooked-top-serifed"
+#t = "flat-hook-short-neck2"
+#ampersand = "closed"
+#at = "fourfold"
 
 [buildPlans.IosevkaTermSs05.ligations]
 inherits = "dlig"
