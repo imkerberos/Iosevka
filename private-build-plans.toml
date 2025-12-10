@@ -14,12 +14,12 @@ inherits = "ss18"
 # leading = 1150
 # 1130显示55行
 # leading = 1130
-leading = 1150
-cap = 665
-ascender = 665
-xHeight = 480
-accentHeight = 136
-parenSize = 840
+leading = 1250
+cap = 700
+ascender = 700
+xHeight = 530
+accentHeight = 145
+parenSize = 885
 # sb默认为60，调整到58后，字符显得挤了点
 #sb = 58
 
