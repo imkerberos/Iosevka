@@ -110,7 +110,7 @@ jobs:
       - name: Fix Iosevka and merged font
         run: |
           # Fix Iosevka font agvCharWidth.
-          python width.py -f 520 IosevkaLxgwSlabNerdFont-Regular.ttf -l -200 -n 30
+          #python width.py -f 520 IosevkaLxgwSlabNerdFont-Regular.ttf -l -200 -n 30
 
           # Fix merged font.
           # python width.py -m ${FILE_MERGED_WFM}-Regular.ttf -o 1000 -t 1040 > /dev/null
@@ -119,10 +119,10 @@ jobs:
           # python width.py -f 520 ${FILE_MERGED_WFM}-Regular.ttf -l -200 -n 30 -a 1040
 
           for STYLE in "Regular"; do
-            python width.py -m ${FUSION_ID}-${STYLE}.ttf -o 1000 -t 1040 > /dev/null
-            python width.py -m ${FUSION_ID}-${STYLE}-w1040.ttf -o 500 -t 520 > /dev/null
-            mv ${FUSION_ID}-${STYLE}-w1040-w520.ttf ${FUSION_ID}-${STYLE}.ttf
-            python width.py -f 520 ${FUSION_ID}-${STYLE}.ttf -l -200 -n 30 -a 1040
+            # python width.py -m ${FUSION_ID}-${STYLE}.ttf -o 1000 -t 1040 > /dev/null
+            #python width.py -m ${FUSION_ID}-${STYLE}-w1040.ttf -o 500 -t 520 > /dev/null
+            #mv ${FUSION_ID}-${STYLE}-w1040-w520.ttf ${FUSION_ID}-${STYLE}.ttf
+            #python width.py -f 520 ${FUSION_ID}-${STYLE}.ttf -l -200 -n 30 -a 1040
 
             gftools update-nameids "${FUSION_ID}-${STYLE}.ttf" \
               --uniqueid "$FUSION_ID-$STYLE-$NOW" \

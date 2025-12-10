@@ -14,12 +14,12 @@ inherits = "ss18"
 # leading = 1150
 # 1130显示55行
 # leading = 1130
-leading = 1250
-cap = 700
-ascender = 700
-xHeight = 530
-accentHeight = 145
-parenSize = 885
+#leading = 1250
+#cap = 700
+#ascender = 700
+#xHeight = 530
+#accentHeight = 145
+#parenSize = 885
 # sb默认为60，调整到58后，字符显得挤了点
 #sb = 58
 
@@ -51,8 +51,8 @@ shape = 400
 menu = 400
 css = 400
 
-[buildPlans.IosevkaLxgwSlab.widths.Normal]
+#[buildPlans.IosevkaLxgwSlab.widths.Normal]
 # 默认宽度shape = 500
-shape = 520
-menu = 5
-css = "normal"
+#shape = 520
+#menu = 5
+#css = "normal"
